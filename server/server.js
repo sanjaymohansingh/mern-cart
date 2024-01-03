@@ -1,17 +1,10 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const connectDb = require("./config/dbConnection");
 const dotenv = require("dotenv").config();
 
+// databse connection
+connectDb();
 const app = express();
-
-mongoose
-  .connect(process.env.CONNECTION_STRING)
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
 
 app.listen(5000, () => {
   console.log("Server is running on port 5000");
