@@ -50,12 +50,12 @@ const Header = () => {
             style={{ fontSize: "34px" }}
           />
         ) : (
-          <Link to="/sign-in">
+          <Link to="/sign-up">
             <li
               className="hidden sm:inline
           text-slate-700 hover:underline"
             >
-              Signin
+              SignUp
             </li>
           </Link>
         )}
