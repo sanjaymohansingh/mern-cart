@@ -4,4 +4,4 @@ const errorHandler = (statusCode, message) => {
   throw error;
 };
 
-module.exports = errorHandler;
+module.exports = { errorHandler };
